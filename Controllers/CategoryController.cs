@@ -1,7 +1,10 @@
+using ApiEcommerce.Constans;
 using ApiEcommerce.Models;
 using ApiEcommerce.Models.Dtos;
 using ApiEcommerce.Repository.IRepository;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,6 +12,8 @@ namespace ApiEcommerce.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
+    //[EnableCors(PolicyNames.AllowSpecificOrigin)]//A nivel de controladores
     public class CategoryController : ControllerBase
     {
         
@@ -21,9 +26,11 @@ namespace ApiEcommerce.Controllers
             _mapper = mapper;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
         [ProducesResponseType(StatusCodes.Status200OK)]
+        // [EnableCors("AllowSpecificOrigin")]//A nivel de metodo
         public IActionResult GetCategories()
         {
             var categories = _categoryRepository.GetCategories();
@@ -35,14 +42,19 @@ namespace ApiEcommerce.Controllers
             return Ok(categoriesDto);
         }
 
+        [AllowAnonymous]
         [HttpGet("{id:int}", Name ="GetCategory")]
+        //[ResponseCache(Duration = 10)]
+        [ResponseCache(CacheProfileName = CacheProfiles.Default10)]
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IActionResult GetCategory(int id)
         {
+            System.Console.WriteLine($"Categoria con el ID: {id} a las {DateTime.UtcNow}");
             var category = _categoryRepository.GetCategory(id);
+            System.Console.WriteLine($"Respuesta con el id: {id}");
             if(category == null) return NotFound($"La categoria con el Id {id} no existe");
 
             var categoryDto = _mapper.Map<CategoryDto>(category);
