@@ -162,3 +162,7 @@ D:\Curso c#\ApiEcommerce\obj\Debug\net9.0\ref\ApiEcommerce.dll
 D:\Curso c#\ApiEcommerce\obj\Debug\net9.0\ApiEcommerce.sourcelink.json
 D:\Curso c#\ApiEcommerce\bin\Debug\net9.0\BCrypt.Net-Next.dll
 D:\Curso c#\ApiEcommerce\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Curso c#\ApiEcommerce\bin\Debug\net9.0\Asp.Versioning.Abstractions.dll
+D:\Curso c#\ApiEcommerce\bin\Debug\net9.0\Asp.Versioning.Http.dll
+D:\Curso c#\ApiEcommerce\bin\Debug\net9.0\Asp.Versioning.Mvc.dll
+D:\Curso c#\ApiEcommerce\bin\Debug\net9.0\Asp.Versioning.Mvc.ApiExplorer.dll
