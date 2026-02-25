@@ -166,3 +166,8 @@ D:\Curso c#\ApiEcommerce\bin\Debug\net9.0\Asp.Versioning.Abstractions.dll
 D:\Curso c#\ApiEcommerce\bin\Debug\net9.0\Asp.Versioning.Http.dll
 D:\Curso c#\ApiEcommerce\bin\Debug\net9.0\Asp.Versioning.Mvc.dll
 D:\Curso c#\ApiEcommerce\bin\Debug\net9.0\Asp.Versioning.Mvc.ApiExplorer.dll
+D:\Curso c#\ApiEcommerce\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Curso c#\ApiEcommerce\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Curso c#\ApiEcommerce\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Curso c#\ApiEcommerce\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+D:\Curso c#\ApiEcommerce\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
